@@ -8,36 +8,11 @@ Library for displaying PDF documents on Android, with `animations`, `gestures`, 
 It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 15 (Android 4.0) and higher.
 Licensed under Apache License 2.0.
 
-## What's new in 3.2.0-beta.1?
-* Merge PR #714 with optimized page load
-* Merge PR #776 with fix for max & min zoom level
-* Merge PR #722 with fix for showing right position when view size changed
-* Merge PR #703 with fix for too many threads
-* Merge PR #702 with fix for memory leak
-* Merge PR #689 with possibility to disable long click
-* Merge PR #628 with fix for hiding scroll handle
-* Merge PR #627 with `fitEachPage` option
-* Merge PR #638 and #406 with fixed NPE
-* Merge PR #780 with README fix
-* Update compile SDK and support library to 28
-* Update Gradle and Gradle Plugin
-
-## Changes in 3.0 API
-* Replaced `Contants.PRELOAD_COUNT` with `PRELOAD_OFFSET`
-* Removed `PDFView#fitToWidth()` (variant without arguments)
-* Removed `Configurator#invalidPageColor(int)` method as invalid pages are not rendered
-* Removed page size parameters from `OnRenderListener#onInitiallyRendered(int)` method, as document may have different page sizes
-* Removed `PDFView#setSwipeVertical()` method
-
 ## Installation
 
 Add to _build.gradle_:
 
 `implementation 'com.github.Foysalofficial:pdf-viewer-android:2.0'`
-
-or if you want to use more stable version:
- 
-`implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'`
 
 Library is available in jcenter repository, probably it'll be in Maven Central soon.
 
@@ -51,7 +26,7 @@ If you are using ProGuard, add following rule to proguard config file:
 ## Include PDFView in your layout
 
 ``` xml
-<com.github.barteksc.pdfviewer.PDFView
+<com.github.pdfviewer.PDFView
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
@@ -125,12 +100,6 @@ By using constructor with second argument (`new DefaultScrollHandle(this, true)`
 You can also create custom scroll handles, just implement **ScrollHandle** interface.
 All methods are documented as Javadoc comments on interface [source](https://github.com/barteksc/AndroidPdfViewer/tree/master/android-pdf-viewer/src/main/java/com/github/barteksc/pdfviewer/scroll/ScrollHandle.java).
 
-## Document sources
-Version 2.3.0 introduced _document sources_, which are just providers for PDF documents.
-Every provider implements **DocumentSource** interface.
-Predefined providers are available in **com.github.barteksc.pdfviewer.source** package and can be used as
-samples for creating custom ones.
-
 Predefined providers can be used with shorthand methods:
 ```
 pdfView.fromUri(Uri)
@@ -179,16 +148,6 @@ void setMidZoom(float zoom);
 void setMaxZoom(float zoom);
 ```
 
-## Possible questions
-### Why resulting apk is so big?
-Android PdfViewer depends on PdfiumAndroid, which is set of native libraries (almost 16 MB) for many architectures.
-Apk must contain all this libraries to run on every device available on market.
-Fortunately, Google Play allows us to upload multiple apks, e.g. one per every architecture.
-There is good article on automatically splitting your application into multiple apks,
-available [here](http://ph0b.com/android-studio-gradle-and-ndk-integration/).
-Most important section is _Improving multiple APKs creation and versionCode handling with APK Splits_, but whole article is worth reading.
-You only need to do this in your application, no need for forking PdfiumAndroid or so.
-
 ### Why I cannot open PDF from URL?
 Downloading files is long running process which must be aware of Activity lifecycle, must support some configuration, 
 data cleanup and caching, so creating such module will probably end up as new library.
@@ -216,14 +175,10 @@ You can use a combination of the following settings to get scroll and fling beha
     .pageFling(true)
 ```
 
-## One more thing
-If you have any suggestions on making this lib better, write me, create issue or write some code and send pull request.
-
 ## License
 
-Created with the help of android-pdfview by [Joan Zapata](http://joanzapata.com/)
 ```
-Copyright 2017 Bartosz Schiller
+Copyright 2024 by Foysal Tech yt
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
