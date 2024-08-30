@@ -12,7 +12,16 @@ Licensed under Apache License 2.0.
 
 Add to _build.gradle_:
 
-`implementation 'com.github.Foysalofficial:pdf-viewer-android:2.0'`
+`implementation ("com.github.Foysalofficial:pdf-viewer-android:2.0")`
+
+
+`dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}`
 
 Library is available in jcenter repository, probably it'll be in Maven Central soon.
 
