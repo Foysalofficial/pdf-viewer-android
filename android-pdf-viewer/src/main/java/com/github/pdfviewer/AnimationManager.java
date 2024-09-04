@@ -1,4 +1,3 @@
-
 package com.github.pdfviewer;
 
 import android.animation.Animator;

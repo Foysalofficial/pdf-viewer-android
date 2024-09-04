@@ -11,8 +11,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import com.github.pdfviewer.PDFView;
+import com.github.pdfviewer.R;
 import com.github.pdfviewer.util.Util;
-import com.multilibrary.foysaltech.R;
 
 public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle {
 
