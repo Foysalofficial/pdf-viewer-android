@@ -1,13 +1,11 @@
-
 package com.github.pdfviewer;
 
 import android.graphics.RectF;
 
+import com.github.pdfviewer.shockwave.pdfium.util.SizeF;
 import com.github.pdfviewer.util.Constants;
 import com.github.pdfviewer.util.MathUtils;
 import com.github.pdfviewer.util.Util;
-import com.shockwave.pdfium.util.SizeF;
-
 import java.util.LinkedList;
 import java.util.List;
 

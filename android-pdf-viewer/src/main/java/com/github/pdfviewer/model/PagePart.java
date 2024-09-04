@@ -1,4 +1,3 @@
-
 package com.github.pdfviewer.model;
 
 import android.graphics.Bitmap;

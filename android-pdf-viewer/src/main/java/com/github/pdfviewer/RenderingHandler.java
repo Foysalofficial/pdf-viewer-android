@@ -1,4 +1,3 @@
-
 package com.github.pdfviewer;
 
 import android.graphics.Bitmap;
@@ -9,7 +8,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
-
 import com.github.pdfviewer.exception.PageRenderingException;
 import com.github.pdfviewer.model.PagePart;
 

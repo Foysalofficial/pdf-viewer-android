@@ -1,4 +1,3 @@
-
 package com.github.pdfviewer;
 
 import android.content.Context;
@@ -36,6 +35,10 @@ import com.github.pdfviewer.listener.OnRenderListener;
 import com.github.pdfviewer.listener.OnTapListener;
 import com.github.pdfviewer.model.PagePart;
 import com.github.pdfviewer.scroll.ScrollHandle;
+import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
+import com.github.pdfviewer.shockwave.pdfium.PdfiumCore;
+import com.github.pdfviewer.shockwave.pdfium.util.Size;
+import com.github.pdfviewer.shockwave.pdfium.util.SizeF;
 import com.github.pdfviewer.source.AssetSource;
 import com.github.pdfviewer.source.ByteArraySource;
 import com.github.pdfviewer.source.DocumentSource;
@@ -47,26 +50,18 @@ import com.github.pdfviewer.util.FitPolicy;
 import com.github.pdfviewer.util.MathUtils;
 import com.github.pdfviewer.util.SnapEdge;
 import com.github.pdfviewer.util.Util;
-import com.shockwave.pdfium.PdfDocument;
-import com.shockwave.pdfium.PdfiumCore;
-import com.shockwave.pdfium.util.Size;
-import com.shockwave.pdfium.util.SizeF;
-
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class PDFView extends RelativeLayout {
 
     private static final String TAG = PDFView.class.getSimpleName();
-
     public static final float DEFAULT_MAX_SCALE = 3.0f;
     public static final float DEFAULT_MID_SCALE = 1.75f;
     public static final float DEFAULT_MIN_SCALE = 1.0f;
-
     private float minZoom = DEFAULT_MIN_SCALE;
     private float midZoom = DEFAULT_MID_SCALE;
     private float maxZoom = DEFAULT_MAX_SCALE;
@@ -143,7 +138,6 @@ public class PDFView extends RelativeLayout {
 
     private boolean pageSnap = true;
 
-    
     private PdfiumCore pdfiumCore;
 
     private ScrollHandle scrollHandle;

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
-
 import com.github.pdfviewer.PDFView;
 import com.github.pdfviewer.model.LinkTapEvent;
 

@@ -1,13 +1,11 @@
-
 package com.github.pdfviewer;
 
 import android.os.AsyncTask;
 
+import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
+import com.github.pdfviewer.shockwave.pdfium.PdfiumCore;
+import com.github.pdfviewer.shockwave.pdfium.util.Size;
 import com.github.pdfviewer.source.DocumentSource;
-import com.shockwave.pdfium.PdfDocument;
-import com.shockwave.pdfium.PdfiumCore;
-import com.shockwave.pdfium.util.Size;
-
 import java.lang.ref.WeakReference;
 
 class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {

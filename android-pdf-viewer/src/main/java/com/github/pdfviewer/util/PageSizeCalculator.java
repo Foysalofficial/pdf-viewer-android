@@ -1,8 +1,8 @@
-
 package com.github.pdfviewer.util;
 
-import com.shockwave.pdfium.util.Size;
-import com.shockwave.pdfium.util.SizeF;
+
+import com.github.pdfviewer.shockwave.pdfium.util.Size;
+import com.github.pdfviewer.shockwave.pdfium.util.SizeF;
 
 public class PageSizeCalculator {
 
