@@ -676,7 +676,7 @@ public class PDFView extends RelativeLayout {
     }
 
     
-    void loadComplete(PdfFile pdfFile) {
+    /*void loadComplete(PdfFile pdfFile) {
         state = State.LOADED;
 
         this.pdfFile = pdfFile;
@@ -697,7 +697,29 @@ public class PDFView extends RelativeLayout {
         callbacks.callOnLoadComplete(pdfFile.getPagesCount());
 
         jumpTo(defaultPage, false);
+    }*/
+
+    void loadComplete(PdfFile pdfFile) {
+        state = State.LOADED;
+        this.pdfFile = pdfFile;
+        if (renderingHandlerThread == null) {
+            renderingHandlerThread = new HandlerThread("RenderingThread");
+            renderingHandlerThread.start();
+        }
+        if (!renderingHandlerThread.isAlive()) {
+            renderingHandlerThread.start();
+        }
+        renderingHandler = new RenderingHandler(renderingHandlerThread.getLooper(), this);
+        renderingHandler.start();
+        if (scrollHandle != null) {
+            scrollHandle.setupLayout(this);
+            isScrollHandleInit = true;
+        }
+        dragPinchManager.enable();
+        callbacks.callOnLoadComplete(pdfFile.getPagesCount());
+        jumpTo(defaultPage, false);
     }
+
 
     void loadError(Throwable t) {
         state = State.ERROR;
