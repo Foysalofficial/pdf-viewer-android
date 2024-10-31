@@ -1,8 +1,8 @@
 # Android Pdf Viewer
 
-__AndroidPdfViewer 1.x is available on [AndroidPdfViewerV2](https://github.com/Foysalofficial/pdf-viewer-android)
-repo, where can be developed independently. Version 1.x uses different engine for drawing document on canvas,
-so if you don't like 2.x version, try 1.x.__
+__AndroidPdfViewer 4.x is available on [AndroidPdfViewerV2](https://github.com/Foysalofficial/pdf-viewer-android)
+repo, where can be developed independently. Version 3.x uses different engine for drawing document on canvas,
+so if you don't like 3.x version, try 4.x.__
 
 Library for displaying PDF documents on Android, with `animations`, `gestures`, `zoom` and `double tap` support.
 It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 15 (Android 4.0) and higher.
@@ -12,7 +12,7 @@ Licensed under Apache License 2.0.
 
 Add to _build.gradle_:
 
-`implementation ("com.github.Foysalofficial:pdf-viewer-android:2.0")`
+`implementation ("com.github.Foysalofficial:pdf-viewer-android:6.1")`
 
 
 `dependencyResolutionManagement {
@@ -120,7 +120,7 @@ pdfView.fromAsset(String)
 Custom providers may be used with `pdfView.fromSource(DocumentSource)` method.
 
 ## Links
-Version 3.0.0 introduced support for links in PDF documents. By default, **DefaultLinkHandler**
+Version 4.0.0 introduced support for links in PDF documents. By default, **DefaultLinkHandler**
 is used and clicking on link that references page in same document causes jump to destination page
 and clicking on link that targets some URI causes opening it in default application.
 
@@ -129,7 +129,7 @@ You can also create custom link handlers, just implement **LinkHandler** interfa
 source to implement custom behavior.
 
 ## Pages fit policy
-Since version 3.0.0, library supports fitting pages into the screen in 3 modes:
+Since version 4.0.0, library supports fitting pages into the screen in 3 modes:
 * WIDTH - width of widest page is equal to screen width
 * HEIGHT - height of highest page is equal to screen height
 * BOTH - based on widest and highest pages, every page is scaled to be fully visible on screen
