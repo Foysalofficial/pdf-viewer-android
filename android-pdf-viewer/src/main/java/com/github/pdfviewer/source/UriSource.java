@@ -1,10 +1,13 @@
+
 package com.github.pdfviewer.source;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
-import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
-import com.github.pdfviewer.shockwave.pdfium.PdfiumCore;
+
+import com.shockwave.pdfium.PdfDocument;
+import com.shockwave.pdfium.PdfiumCore;
+
 import java.io.IOException;
 
 public class UriSource implements DocumentSource {

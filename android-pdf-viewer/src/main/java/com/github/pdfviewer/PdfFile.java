@@ -5,13 +5,15 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.SparseBooleanArray;
+
 import com.github.pdfviewer.exception.PageRenderingException;
-import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
-import com.github.pdfviewer.shockwave.pdfium.PdfiumCore;
-import com.github.pdfviewer.shockwave.pdfium.util.Size;
-import com.github.pdfviewer.shockwave.pdfium.util.SizeF;
 import com.github.pdfviewer.util.FitPolicy;
 import com.github.pdfviewer.util.PageSizeCalculator;
+import com.shockwave.pdfium.PdfDocument;
+import com.shockwave.pdfium.PdfiumCore;
+import com.shockwave.pdfium.util.Size;
+import com.shockwave.pdfium.util.SizeF;
+
 import java.util.ArrayList;
 import java.util.List;
 

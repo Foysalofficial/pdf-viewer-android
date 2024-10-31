@@ -1,8 +1,11 @@
+
 package com.github.pdfviewer.source;
 
 import android.content.Context;
-import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
-import com.github.pdfviewer.shockwave.pdfium.PdfiumCore;
+
+import com.shockwave.pdfium.PdfDocument;
+import com.shockwave.pdfium.PdfiumCore;
+
 import java.io.IOException;
 
 public interface DocumentSource {

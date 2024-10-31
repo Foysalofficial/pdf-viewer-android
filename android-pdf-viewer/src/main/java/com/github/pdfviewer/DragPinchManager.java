@@ -6,12 +6,13 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+
 import com.github.pdfviewer.model.LinkTapEvent;
 import com.github.pdfviewer.scroll.ScrollHandle;
-import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
-import com.github.pdfviewer.shockwave.pdfium.util.SizeF;
 import com.github.pdfviewer.util.SnapEdge;
 import com.github.pdfviewer.util.Constants;
+import com.shockwave.pdfium.PdfDocument;
+import com.shockwave.pdfium.util.SizeF;
 
 
 class DragPinchManager implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener, ScaleGestureDetector.OnScaleGestureListener, View.OnTouchListener {

@@ -2,7 +2,8 @@
 package com.github.pdfviewer.model;
 
 import android.graphics.RectF;
-import com.github.pdfviewer.shockwave.pdfium.PdfDocument;
+
+import com.shockwave.pdfium.PdfDocument;
 
 public class LinkTapEvent {
     private float originalX;
