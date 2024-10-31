@@ -669,29 +669,27 @@ public class PDFView extends RelativeLayout {
         redraw();
     }
 
-    
+
+
     void loadComplete(PdfFile pdfFile) {
         state = State.LOADED;
-
         this.pdfFile = pdfFile;
-
-        if (!renderingHandlerThread.isAlive()) {
+        if (renderingHandlerThread == null) {
+            renderingHandlerThread = new HandlerThread("RenderingHandlerThread");
             renderingHandlerThread.start();
         }
         renderingHandler = new RenderingHandler(renderingHandlerThread.getLooper(), this);
         renderingHandler.start();
-
         if (scrollHandle != null) {
             scrollHandle.setupLayout(this);
             isScrollHandleInit = true;
         }
-
         dragPinchManager.enable();
-
         callbacks.callOnLoadComplete(pdfFile.getPagesCount());
-
         jumpTo(defaultPage, false);
     }
+
+
 
     void loadError(Throwable t) {
         state = State.ERROR;
