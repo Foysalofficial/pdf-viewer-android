@@ -24,9 +24,16 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    sourceSets {
+    sourceSets{
         main {
-            jniLibs.srcDirs = ['src/main/jniLibs']
+            jni.srcDirs = []
+            jniLibs.srcDir 'src/main/libs'
+        }
+    }
+
+    defaultConfig {
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
     }
 

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.library.foysaltech'
+    namespace 'com.pdfviewer.foysaltech'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.library.foysaltech"
+        applicationId "com.pdfviewer.foysaltech"
         minSdk 21
         targetSdk 34
         versionCode 5

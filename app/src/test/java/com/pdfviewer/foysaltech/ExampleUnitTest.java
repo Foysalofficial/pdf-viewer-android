@@ -1,4 +1,4 @@
-package com.library.foysaltech;
+package com.pdfviewer.foysaltech;
 
 import org.junit.Test;
 
